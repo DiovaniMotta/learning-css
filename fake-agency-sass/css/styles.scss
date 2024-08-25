@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$primary-color: #6d698b;
+$secondary-color: #c295e5;
+$background-color: white;
+$font-color:grey;
+$custom-font-family: "Lobster", cursive;
+
+@mixin centralize {
+  justify-content: center;
+  align-items: center;
+}
+
+.align-left {
+  margin-left: 10%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100px;
+  background-color: $background-color;
+  @include centralize;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  flex: 20%;
+  @extend .align-left;
+  text-align: left;
+}
+
+.logo h1 {
+  font-family: $custom-font-family;
+  color: $primary-color;
+  font-size: 34px;
+}
+
+.menu {
+  flex: 70%;
+  text-align: right;
+  padding: 20px;
+}
+
+.menu a {
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 16px;
+}
+
+.menu a:hover {
+  color: $secondary-color;
+  border-top: 4px solid $primary-color;
+}
+
+#contact {
+  background: $primary-color;
+  padding: 10px 25px;
+  color: $background-color;
+  border-radius: 5px;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+
+#contact:hover {
+  border: none;
+  background: $secondary-color;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  background: $background-color;
+  @include centralize;
+  padding-top: 100px;
+}
+
+.headline {
+  flex: 40%;
+  @extend .align-left
+}
+
+.headline p {
+  color: $font-color;
+  text-align: left;
+}
+
+.header h2 {
+  font-weight: 900;
+  font-size: 20px;
+  color: $primary-color;
+  padding: 0;
+  margin: 0;
+}
+
+#company-name {
+  font-size: 80px;
+}
+
+#you-arrived-best {
+  letter-spacing: 15px;
+}
+
+.img-headline {
+  margin-right: 10%;
+  flex: 40%;
+  text-align: center;
+}
+
+.img-headline img {
+  max-width: 90%;
+}
+
+.purchase {
+  display: inline-block;
+  background: $secondary-color;
+  padding: 20px;
+  color: $background-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.purchase:hover {
+  background: $primary-color;
+}
+
+section {
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  padding: 5%;
+}
+
+section h2 {
+  width: 100%;
+  font-size: 50px;
+  margin: 0;
+  font-family: $custom-font-family;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.service {
+  display: inline-block;
+  margin-top: 5%;
+}
+
+.card {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  margin: 1%;
+  border: 1px solid $secondary-color;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card img {
+  color: $secondary-color;
+}
+
+.card:hover {
+  background: $secondary-color;
+  color: $background-color;
+  padding: 40px;
+}
+
+.card:hover .card-text {
+  display: none;
+}
+
+.card:hover img {
+  display: none;
+}
+
+.card:hover .card-text-hidden {
+  display: block;
+}
+
+.card-text-hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 100px;
+  height: 400px;
+  background-image: linear-gradient(180deg, $primary-color, #4d4870, #2c2942);
+  text-align: center;
+  border-top: 5px solid $secondary-color;
+}
+
+.img-footer {
+  padding: 100px;
+}
+
+.company-name-label {
+  font-family: $custom-font-family;
+  color: $background-color;
+  font-size: 34px;
+}
+
+.img-footer p {
+  color: $background-color;
+}
+
+.img-footer b {
+  color: $background-color;
+}
+
+.contact-us {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
